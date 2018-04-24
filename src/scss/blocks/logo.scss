@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__pic  {
+    width: 155px;
+    height: 47px;   
+    margin-bottom: 14px;
+}
+
+.logo__promo {
+    color: $basic;
+    font-weight: 800;
+    font-size: 14px;
+}

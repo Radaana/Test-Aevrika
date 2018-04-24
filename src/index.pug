@@ -1,0 +1,94 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset = "utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet") 
+        link(rel="stylesheet", href="css/style.min.css")
+        title Test-task
+    body
+        .maincontent
+            header.header
+                .header__top
+                    .container
+                        .header__top-left
+                            nav.nav
+                                ul.nav__list
+                                    each val in ["О компании", "Портфолио", "Сотрудничество", "Требования  к макету", "Контакты"]
+                                        li.nav__item
+                                            a.nav__link(href="#")= val
+                        .header__top-right
+                            .favorites Добавить сайт в закладки
+                .header__bottom
+                    .container
+                        .header__column
+                            .logo
+                                .logo__pic 
+                                    img.img(src="img/logo.png") 
+                                span.logo__promo Ваш заказ уже сегодня
+                        .header__column 
+                            .contacts   
+                                span.phone +7 (495) 241-96-37
+                                span.contacts__worktime Пн-Сб 10:00—19:00   Вс — выходной
+                                a.link.contacts__email(href="#") 7292554@mail.ru
+                        .header__column 
+                            .place   
+                                span.place__phone Москва, м. Дубровка ул. Шарикоподшипниковская, д. 13
+                                a.link.place__link(href="#") Как нас найти
+                        .header__column 
+                            .order   
+                                button.btn(type="button") Cрочный заказ
+                                a.link.order__link(href="#") Задать вопрос
+            section.section.greeting
+                .greeting__header
+                    ul.menu
+                        li.menu__item 
+                            button.menu__button(type="button") Печатная продукция
+                        li.menu__item 
+                            button.menu__button(type="button") Услуги
+                        li.menu__item 
+                            button.menu__button(type="button") Наружная и интерьерная реклама
+                .greeting__main
+                    .greeting__top
+                        .container
+                            h1.greeting__title Широкоформатная печать
+                    .greeting__bottom
+                        .greeting__column
+                            ul.slide-menu
+                                li.slide-menu__item
+                                    a.slide-menu__link(href="#") Стоимость
+                                li.slide-menu__item
+                                    a.slide-menu__link(href="#") Виды печати
+                                li.slide-menu__item
+                                    a.slide-menu__link(href="#") Оплата и доставка
+                                li.slide-menu__item
+                                    a.slide-menu__link(href="#") Вопрос-ответ
+                                li.slide-menu__item
+                                    a.slide-menu__link(href="#") Заказать онлайн
+                        .greeting__column
+                            span.promo Все виды широкоформатной печати
+                        .greeting__column
+                            ul.types
+                                li.types__item Растяжки
+                                li.types__item Световые короба
+                                li.types__item Вывески
+                                li.types__item Штендеры 
+                        .greeting__column
+                            .greeting__button
+                                span.phone.phone--greeting +7 (495) 241-96-37
+                                button.btn.btn--greeting(type="button") Оформить онлайн
+            section.section.portfolio
+                .section__inner
+                    h2.section__title Популярные тиражи
+                    ul.popular
+                        each item, index in ['Растяжки', 'Плакаты', 'Пресс-волы', 'Штендеры', 'Ролл-апы', 'Лайтбоксы', 'Стенды']
+                            li.popular__card
+                                span.popular__name= item 
+                                .popular__pic
+                                    img.img(src=`img/${index +1}.png`)
+                        button.popular__order(type="button")
+                            .popular__text Оформить индивидуальный заказ
+                            .popular__arrow
+        script(src="js/script.min.js")

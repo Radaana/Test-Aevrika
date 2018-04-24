@@ -1,0 +1,30 @@
+.slide-menu  {
+    width: 187px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.slide-menu__item {
+    height: 52px;
+    width: 100%;
+    display: block;
+}
+
+.slide-menu__link {
+    // padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: $basic;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: 800;
+
+    &:hover {
+        background-color:$accent;
+    }
+}

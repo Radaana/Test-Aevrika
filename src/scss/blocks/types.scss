@@ -1,0 +1,26 @@
+.types {
+    // width: 255px;
+    display: flex;
+    flex-direction: column;
+}
+
+.types__item {
+    padding: 14px 0 14px 42px;
+    position: relative;
+    color: #fff;
+
+    &:before {
+        content: '';
+        @include sprite($check);
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%)
+
+    }
+
+
+}

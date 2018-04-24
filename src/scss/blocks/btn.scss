@@ -1,0 +1,19 @@
+.btn {
+    padding: 14px 45px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    background-color: $accent;
+    font-size: 12px;
+    cursor: pointer;
+
+    &--greeting {
+        padding: 21px 73px;
+    }
+
+    &:hover {
+        border: 2px solid $accent;
+        background-color: #fff;
+        color: $accent;
+    }
+}

@@ -1,0 +1,31 @@
+.section {
+    width: 100%;
+}
+
+.section__inner  {
+    width: 100%;
+    max-width: 1146px;
+    margin: 0 auto;
+    padding-left: 200px;
+    position: relative;
+    padding-top: 75px;
+
+
+    &:before {
+        content: '';
+        height: 3px;
+        width: 84px;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        background-color: $accent;
+    }
+}
+
+.section__title {
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $basic;
+    font-family: 'Open Sans Condensed', sans-serif;
+}

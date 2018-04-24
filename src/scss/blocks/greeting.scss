@@ -1,0 +1,49 @@
+.greeting__header {
+    height: 75px;
+    background-color: $basic;
+}
+
+.greeting__main {
+    // height: 840px;
+    background: $basic url('../img/bg-1.png') center center no-repeat;
+    background-size: cover;
+    
+}
+
+.greeting__top {
+    height: 400px;
+}
+
+.greeting__title {
+    color: #fff;
+    font-size: 108px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 60px ;
+
+    &:after {
+        content: '';
+        height: 3px;
+        width: 84px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $accent;
+    }
+}
+
+.greeting__bottom {
+    display: flex;
+    height: 260px;
+    width: 100%;
+    justify-content: space-between
+}
+
+.greeting__button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 80px;
+}

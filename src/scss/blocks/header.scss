@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+}
+
+.header__top {
+    height: 35px;
+    border-bottom: 1px solid #e2e2ed;
+    display: flex;
+}
+
+.header__top-left {
+    flex-grow: 1;
+}
+
+.header__top-right {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.header__bottom {
+    height: 126px;
+}
+
+.header__column {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

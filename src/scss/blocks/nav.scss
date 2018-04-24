@@ -1,0 +1,14 @@
+.nav__list {
+    display: flex;
+    margin-left: -28px;
+    align-items: center;
+}
+
+.nav__link {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: $menu;
+    padding: 0 28px ;
+    font-size: 11px;
+}
