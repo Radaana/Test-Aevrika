@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Test-task</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <div class="maincontent">
@@ -73,12 +74,12 @@
           </div>
           <div class="greeting__bottom">
             <div class="greeting__column">
-              <ul class="slide-menu">
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Стоимость</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Виды печати</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Оплата и доставка</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Вопрос-ответ</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Заказать онлайн</a></li>
+              <ul class="slide-menu"> 
+                <li class="slide-menu__item"><a class="slide-menu__link" href="#" title="Виды печати">Виды печати</a></li>
+                <li class="slide-menu__item"><a class="slide-menu__link" href="#" title="Стоимость">Стоимость</a></li>
+                <li class="slide-menu__item"><a class="slide-menu__link" href="#" title="Оплата и доставка">Оплата и доставка</a></li>
+                <li class="slide-menu__item"><a class="slide-menu__link" href="#" title="Вопрос-ответ">Вопрос-ответ</a></li>
+                <li class="slide-menu__item"><a class="slide-menu__link" href="#" title="Заказать онлайн">Заказать онлайн</a></li>
               </ul>
             </div>
             <div class="greeting__column"><span class="promo">Все виды широкоформатной печати</span></div>
@@ -285,9 +286,181 @@
               <button class="questions__button link" type="button">Как узнать стоимость продукции?</button>
             </li>
           </ul>
+          <form class="form">
+            <h2 class="section__title form__title">Оформить заказ</h2>
+            <div class="form__row">
+              <div class="form__cell">
+                <input class="form__input" type="text" placeholder="Ваше имя">
+                <div class="form__ok"></div>
+              </div>
+              <div class="form__cell">
+                <input class="form__input" type="text" placeholder="Компания">
+                <div class="form__ok"></div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__cell">
+                <input class="form__input" type="email" placeholder="Email">
+                <div class="form__ok"></div>
+              </div>
+              <div class="form__cell">
+                <input class="form__input" type="phone" placeholder="Телефон *">
+                <div class="form__ok"></div>
+              </div>
+            </div>
+            <textarea class="form__input form__textarea" rows="3" placeholder="Комментарий"></textarea>
+            <button class="form__add" type="button">Прикрепить файл</button>
+            <button class="btn form__submit" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
+      <section class="section">
+        <div class="section__inner">
+          <h2 class="section__title">Остались вопросы?</h2>
+          <ul class="cards">
+            <li class="cards__card"><span class="cards__text">Позвоните</span><span class="cards__text cards__text--bold">+7 (495) 241-96-37</span>
+              <div class="cards__icon cards__icon--phone"></div><span class="cards__text cards__text--gray">или</span><a class="cards__link" href="#" title="Закажите обратный звонок">Закажите обратный звонок</a>
+            </li>
+            <li class="cards__card"><span class="cards__text">Напишите на email</span><span class="cards__text cards__text--bold">729554@mail.ru</span>
+              <div class="cards__icon cards__icon--envelope"></div><a class="cards__link" href="#" title="Мы ответим в течение часа">Мы ответим в течение часа</a>
+            </li>
+            <li class="cards__card"><span class="cards__text">Приезжайте</span><span class="cards__text cards__text--bold">к нам в офис</span>
+              <div class="cards__icon cards__icon--point"></div><a class="cards__link" href="#" title="Схема проезда">Схема проезда</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__inner">
+          <h2 class="section__title">Портфолио</h2>
+          <div class="slider">
+            <div class="slider__arrow slider__arrow--left"></div>
+            <div class="slider__arrow slider__arrow--right"></div>
+            <ul class="slider__list">
+              <li class="slider__item"><img class="img" src="img/portfolio-1.png"></li>
+              <li class="slider__item"><img class="img" src="img/portfolio-2.png"></li>
+              <li class="slider__item"><img class="img" src="img/portfolio-3.png"></li>
+            </ul>
+          </div>
+          <div class="longread">
+            <div class="longread__row">
+              <div class="longread__cell">
+                <h3 class="longread__title">Преимущества широкоформатной печати</h3>
+              </div>
+              <div class="longread__cell">
+                <p>Когда клиенту понадобится ваш продукт, он извлечет из подсознания яркий плакат, который видел каждый день по дороге на работу, и позвонит вам. Именно так работает широкоформатная печать баннеров.</p><span class="longread__subtitle">Преимущества технологии:</span>
+                <p>— Огромные размеры: яркая, заметная реклама формирует имидж компании и повышает узнаваемость бренда.</p>
+                <p>— Низкая стоимость: реклама на телевидении и в прессе, создание и продвижение сайта стоят дороже.</p>
+                <p>— Работает круглосуточно: баннер, стенд, перетяжка работают на вас 24 часа в сутки, вне зависимости от погодных условий.</p>
+                <p>— Большие дизайнерские возможности: широкоформатная печать баннеров позволяет использовать полную гамму цветов, наносить разные полутона и оттенки, создавать градиентную заливку и т.д.</p>
+              </div>
+            </div>
+            <div class="longread__row">
+              <div class="longread__cell">
+                <h3 class="longread__title">Работа с нами</h3>
+              </div>
+              <div class="longread__cell"><span class="longread__subtitle">Сотрудничать с нами выгодно, потому что:</span>
+                <p>—  Цена печати – одна из самых низких в столице: если вы ищете изготовление уличной рекламы или печать плакатов дешево, то это к нам.</p>
+                <p>— Работаем профессионально: подчеркнем корпоративный стиль, сделаем оригинальный дизайн, с помощью современных плоттеров добьемся высочайшего разрешения до 2880 dpi.</p>
+                <p>— Используем только сертифицированные материалы, чернила без специфического запаха и токсичных выделений.</p>
+                <p>— Принимаем заказы любого объема: от 1 экземпляра до крупного тиража.</p>
+                <p>— Делаем продукцию любого размера: технические ограничения отсутствуют.</p>
+                <p>— Сроки указываете вы: если есть макет, сможете забрать баннер в течение нескольких часов.</p>
+                <p>— Работаем с сетевиками, корпоративными и индивидуальными заказчиками.</p>
+                <p>— Привезем продукцию, куда нужно: область доставки – Москва и Подмосковье.</p>
+              </div>
+            </div>
+            <div class="longread__row">
+              <div class="longread__cell">
+                <h3 class="longread__title">Срочная широкоформатная печать</h3>
+              </div>
+              <div class="longread__cell"> 
+                <p>Для тех, кому нужна продукция в экстренном порядке, у нас есть услуга «срочная широкоформатная печать». Изготовим рекламный продукт к началу выставки, конференции, концерта или другого мероприятия за 1-2 часа.</p>
+              </div>
+            </div>
+            <div class="longread__row">
+              <div class="longread__cell">
+                <h3 class="longread__title">Требования к макетам для широкоформатной печати</h3>
+              </div>
+              <div class="longread__cell"> 
+                <p>Присылайте готовые макеты на адрес 7292554@mail.ru. Если файл большой, можно использовать файлообменник и отправить ссылку на файл.</p>
+                <p>Также мы принимаем макеты в офисе компании по адресу г. Москва, ул. Шарикоподшипниковская, д.13, ТЦ «Дубровка». Загрузите файл на USB Flash-карту, USB внешний жесткий диск, DVD, CD.</p><span class="longread__subtitle">Перед отправкой макета ознакомьтесь с требованиями:</span>
+                <p>— Оптимальный формат – PDF, TIF. Также принимаем CDR, AI, EPS.</p>
+                <p>— Сохранение файла с LZW-компрессией. Не подходят программы Autocad, Microsoft Office.</p>
+                <p>— Каждое изображение для печати в отдельном файле.</p>
+                <p>— Альфа-каналы и пути отсутствуют.</p>
+                <p>— Цветовая палитра: CMYK, 8 bits.</p>
+                <p>— Шрифты в кривых.</p>
+                <p>— Масштаб 1 к 1, припуски отсутствуют.</p>
+                <p>— Разрешение: для 360 dpi – до 80 пикселей/дюйм, для 720 dpi – до 150 пикселей/дюйм.</p>
+                <p>Остались вопросы? Звоните, будем рады помочь!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container footer__container">
+            <div class="footer__row">
+              <div class="footer__column footer__column--typo"><span class="footer__title">Типография</span>
+                <ul class="footer__list">
+                  <li class="footer__item">О компании</li>
+                  <li class="footer__item">Оборудование</li>
+                  <li class="footer__item">Оплатить заказ</li>
+                  <li class="footer__item">Портфолио</li>
+                  <li class="footer__item">Доставка</li>
+                  <li class="footer__item">Контакты</li>
+                  <li class="footer__item">Сотрудничество</li>
+                  <li class="footer__item">FAQ</li>
+                  <li class="footer__item">Дизайн</li>
+                  <li class="footer__item">Требования к макетам</li>
+                </ul>
+              </div>
+              <div class="footer__column"><span class="footer__title">Полиграфические услуги</span>
+                <div class="footer__divider">
+                  <ul class="footer__list">
+                    <li class="footer__item">Визитки </li>
+                    <li class="footer__item">Бланки и самокопирующиеся бланки</li>
+                    <li class="footer__item">Цифровая печать</li>
+                    <li class="footer__item">Наклейки</li>
+                    <li class="footer__item">Объемные буквы</li>
+                    <li class="footer__item">Тампопечать</li>
+                    <li class="footer__item">Календари</li>
+                    <li class="footer__item">Ресторанное меню</li>
+                    <li class="footer__item">Ризография</li>
+                    <li class="footer__item">Вывески</li>
+                    <li class="footer__item">Изготовление печатей</li>
+                    <li class="footer__item">Широкоформатное ламинирование</li>
+                  </ul>
+                  <ul class="footer__list">
+                    <li class="footer__item">Листовки и флаеры</li>
+                    <li class="footer__item">Бумажные пакеты</li>
+                    <li class="footer__item">Тиснение фольгой</li>
+                    <li class="footer__item">Растяжки</li>
+                    <li class="footer__item">Широкоформатная печать</li>
+                    <li class="footer__item">Штендеры и плоттеры</li>
+                    <li class="footer__item">Буклеты</li>
+                    <li class="footer__item">Брошюры</li>
+                    <li class="footer__item">Авиши</li>
+                    <li class="footer__item">Световые короба</li>
+                    <li class="footer__item">Плоттерная резка</li>
+                    <li class="footer__item">Информационные стенды и таблички</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__column footer__column--contacts"><span class="footer__title">Контакты</span><span class="footer__promo">«Полиграфия от А до Я» — ваш надежный партнер в сфере маркетинга и рекламы!</span>
+                <div class="contacts contacts--footer">  <span class="phone phone--footer">+7 (495) 241-96-37</span><span class="contacts__worktime">Пн-Сб 10:00—19:00   Вс — выходной</span><span class="contacts__email">7292554@mail.ru</span></div>
+                <div class="place place--footer"><span class="place__phone">Москва, м. Дубровка ул. Шарикоподшипниковская, д. 13</span><span class="place__link">Как нас найти</span></div>
+              </div>
+            </div>
+            <div class="footer__row"><span class="footer__title">Мы на карте </span></div>
+          </div>
+        </div>
+        <div class="footer__map" id="map"></div>
+      </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@
 
     &:before {
         content: '';
-        @include sprite($phone-small);
+        @include sprite($marker-small);
         display: inline-block;
         padding-top: 10px;
         margin-right: 15px;
@@ -17,7 +17,16 @@
         position: absolute;
         top: 10px;
         left: 0;
+    }
 
+    &--footer {
+        &:before {
+            @include sprite($marker-white);
+        }
+
+        .place__link  {
+            color: $footer;
+        }
     }
 }
 

@@ -1,0 +1,33 @@
+.slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 83px;
+}
+
+.slider__arrow {
+    position: absolute;
+    width: 19px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+        @include sprite($arrow-left);
+        left: -65px;
+    }
+
+    &--right {
+        @include sprite($arrow-right);
+        right: -65px;
+    }
+}
+
+.slider__list {
+    display: flex;
+}
+
+.slider__item {
+    width: 296px;
+    height: 260px;
+    margin-right: 10px;
+}

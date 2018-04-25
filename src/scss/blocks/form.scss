@@ -1,0 +1,96 @@
+.form {
+    height: 600px;
+    border: 8px solid $basic;
+    position: relative;
+    padding: 40px 70px;
+    // display: flex;
+    // flex-direction: column;
+    // align-content: flex-start;
+    
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $line;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: -5;
+    }
+}
+
+.form__title {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 98px;
+    background-color: #fff;
+}
+
+
+.form__row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form__cell {
+    // width: 50%;
+    flex-grow: 1;
+    position: relative;
+
+}
+
+.form__input {
+    width: 95%;
+    background-color: transparent;
+    border-bottom: 3px solid $basic;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: 24px;
+    color: $basic;
+    padding: 25px 0;
+    margin: 0 15px;
+    // placeholder: 
+
+    &::-webkit-input-placeholder {color:$basic; opacity: 0.5;};
+    &::-moz-placeholder          {color:$basic; opacity: 0.5;};/* Firefox 19+ */
+    &:-moz-placeholder           {color:$basic; opacity: 0.5;};/* Firefox 18- */
+    &:-ms-input-placeholder      {color:$basic; opacity: 0.5;};
+}
+
+.form__ok {
+    position: absolute;
+}
+
+.form__textarea {
+    margin-bottom: 40px;
+}
+
+.form__add {
+    display: block;
+    color: $basic;
+    padding-left: 40px;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    margin: 0 15px 30px;
+
+    &:before {
+        content: '';
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include sprite($plus)
+    }
+}
+
+.form__submit {
+    padding: 20px 105px;
+    margin: 0 auto;
+    display: block;
+}

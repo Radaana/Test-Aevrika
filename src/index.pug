@@ -8,6 +8,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet") 
         link(rel="stylesheet", href="css/style.min.css")
         title Test-task
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     body
         .maincontent
             header.header
@@ -56,17 +57,10 @@ html(lang="ru")
                             h1.greeting__title Широкоформатная печать
                     .greeting__bottom
                         .greeting__column
-                            ul.slide-menu
-                                li.slide-menu__item
-                                    a.slide-menu__link(href="#") Стоимость
-                                li.slide-menu__item
-                                    a.slide-menu__link(href="#") Виды печати
-                                li.slide-menu__item
-                                    a.slide-menu__link(href="#") Оплата и доставка
-                                li.slide-menu__item
-                                    a.slide-menu__link(href="#") Вопрос-ответ
-                                li.slide-menu__item
-                                    a.slide-menu__link(href="#") Заказать онлайн
+                            ul.slide-menu 
+                                each item, index in ['Виды печати', 'Стоимость', 'Оплата и доставка', 'Вопрос-ответ', 'Заказать онлайн']
+                                    li.slide-menu__item
+                                        a.slide-menu__link(href="#" title=`${item}`)= item
                         .greeting__column
                             span.promo Все виды широкоформатной печати
                         .greeting__column
@@ -185,8 +179,133 @@ html(lang="ru")
                             button.questions__button.link(type="button") Какие требования к макету?
                         li.questions__item
                             button.questions__button.link(type="button") Как узнать стоимость продукции?
-
-
-
-
+                    form.form
+                        h2.section__title.form__title Оформить заказ
+                        .form__row
+                            .form__cell
+                                input.form__input(type="text" placeholder="Ваше имя")
+                                .form__ok
+                            .form__cell
+                                input.form__input(type="text" placeholder="Компания")
+                                .form__ok
+                        .form__row
+                            .form__cell
+                                input.form__input(type="email" placeholder="Email")
+                                .form__ok
+                            .form__cell
+                                input.form__input(type="phone" placeholder="Телефон *")
+                                .form__ok
+                        textarea.form__input.form__textarea(rows="3" placeholder="Комментарий")
+                        button.form__add(type="button") Прикрепить файл
+                        button.btn.form__submit(type="submit") Отправить
+            section.section
+                .section__inner
+                    h2.section__title Остались вопросы?
+                    ul.cards
+                        li.cards__card
+                            span.cards__text Позвоните
+                            span.cards__text.cards__text--bold +7 (495) 241-96-37
+                            .cards__icon.cards__icon--phone
+                            span.cards__text.cards__text--gray или
+                            a.cards__link(href="#" title='Закажите обратный звонок') Закажите обратный звонок
+                        li.cards__card
+                            span.cards__text Напишите на email
+                            span.cards__text.cards__text--bold 729554@mail.ru
+                            .cards__icon.cards__icon--envelope
+                            a.cards__link(href="#" title='Мы ответим в течение часа') Мы ответим в течение часа
+                        li.cards__card
+                            span.cards__text Приезжайте
+                            span.cards__text.cards__text--bold к нам в офис
+                            .cards__icon.cards__icon--point
+                            a.cards__link(href="#" title='Схема проезда') Схема проезда
+            section.section
+                .section__inner
+                    h2.section__title Портфолио
+                    .slider
+                        .slider__arrow.slider__arrow--left
+                        .slider__arrow.slider__arrow--right
+                        ul.slider__list
+                            li.slider__item
+                                img.img(src="img/portfolio-1.png")
+                            li.slider__item
+                                img.img(src="img/portfolio-2.png")
+                            li.slider__item
+                                img.img(src="img/portfolio-3.png")
+                    .longread
+                        .longread__row
+                            .longread__cell
+                                h3.longread__title Преимущества широкоформатной печати
+                            .longread__cell
+                                p Когда клиенту понадобится ваш продукт, он извлечет из подсознания яркий плакат, который видел каждый день по дороге на работу, и позвонит вам. Именно так работает широкоформатная печать баннеров.
+                                span.longread__subtitle Преимущества технологии:
+                                p — Огромные размеры: яркая, заметная реклама формирует имидж компании и повышает узнаваемость бренда.
+                                p — Низкая стоимость: реклама на телевидении и в прессе, создание и продвижение сайта стоят дороже.
+                                p — Работает круглосуточно: баннер, стенд, перетяжка работают на вас 24 часа в сутки, вне зависимости от погодных условий.
+                                p — Большие дизайнерские возможности: широкоформатная печать баннеров позволяет использовать полную гамму цветов, наносить разные полутона и оттенки, создавать градиентную заливку и т.д.
+                        .longread__row
+                            .longread__cell
+                                h3.longread__title Работа с нами
+                            .longread__cell
+                                span.longread__subtitle Сотрудничать с нами выгодно, потому что:
+                                p —  Цена печати – одна из самых низких в столице: если вы ищете изготовление уличной рекламы или печать плакатов дешево, то это к нам.
+                                p — Работаем профессионально: подчеркнем корпоративный стиль, сделаем оригинальный дизайн, с помощью современных плоттеров добьемся высочайшего разрешения до 2880 dpi.
+                                p — Используем только сертифицированные материалы, чернила без специфического запаха и токсичных выделений.
+                                p — Принимаем заказы любого объема: от 1 экземпляра до крупного тиража.
+                                p — Делаем продукцию любого размера: технические ограничения отсутствуют.
+                                p — Сроки указываете вы: если есть макет, сможете забрать баннер в течение нескольких часов.
+                                p — Работаем с сетевиками, корпоративными и индивидуальными заказчиками.
+                                p — Привезем продукцию, куда нужно: область доставки – Москва и Подмосковье.
+                        .longread__row
+                            .longread__cell
+                                h3.longread__title Срочная широкоформатная печать
+                            .longread__cell 
+                                p Для тех, кому нужна продукция в экстренном порядке, у нас есть услуга «срочная широкоформатная печать». Изготовим рекламный продукт к началу выставки, конференции, концерта или другого мероприятия за 1-2 часа.
+                        .longread__row
+                            .longread__cell
+                                h3.longread__title Требования к макетам для широкоформатной печати
+                            .longread__cell 
+                                p Присылайте готовые макеты на адрес 7292554@mail.ru. Если файл большой, можно использовать файлообменник и отправить ссылку на файл.
+                                p Также мы принимаем макеты в офисе компании по адресу г. Москва, ул. Шарикоподшипниковская, д.13, ТЦ «Дубровка». Загрузите файл на USB Flash-карту, USB внешний жесткий диск, DVD, CD.
+                                span.longread__subtitle Перед отправкой макета ознакомьтесь с требованиями:
+                                p — Оптимальный формат – PDF, TIF. Также принимаем CDR, AI, EPS.
+                                p — Сохранение файла с LZW-компрессией. Не подходят программы Autocad, Microsoft Office.
+                                p — Каждое изображение для печати в отдельном файле.
+                                p — Альфа-каналы и пути отсутствуют.
+                                p — Цветовая палитра: CMYK, 8 bits.
+                                p — Шрифты в кривых.
+                                p — Масштаб 1 к 1, припуски отсутствуют.
+                                p — Разрешение: для 360 dpi – до 80 пикселей/дюйм, для 720 dpi – до 150 пикселей/дюйм.
+                                p Остались вопросы? Звоните, будем рады помочь!
+            footer.footer
+                .footer__top
+                    .container.footer__container
+                        .footer__row
+                            .footer__column.footer__column--typo
+                                span.footer__title Типография
+                                ul.footer__list
+                                    each li in ['О компании', 'Оборудование', 'Оплатить заказ', 'Портфолио', 'Доставка', 'Контакты', 'Сотрудничество', 'FAQ', 'Дизайн', 'Требования к макетам']
+                                        li.footer__item= li
+                            .footer__column
+                                span.footer__title Полиграфические услуги
+                                .footer__divider
+                                    ul.footer__list
+                                        each li in ["Визитки ", "Бланки и самокопирующиеся бланки", "Цифровая печать", "Наклейки", "Объемные буквы", "Тампопечать", "Календари", "Ресторанное меню", "Ризография", "Вывески", "Изготовление печатей", "Широкоформатное ламинирование"]
+                                            li.footer__item= li
+                                    ul.footer__list
+                                        each li in ["Листовки и флаеры", "Бумажные пакеты", "Тиснение фольгой", "Растяжки", "Широкоформатная печать", "Штендеры и плоттеры", "Буклеты", "Брошюры", "Авиши", "Световые короба", "Плоттерная резка", "Информационные стенды и таблички"]
+                                            li.footer__item= li
+                            .footer__column.footer__column--contacts
+                                span.footer__title Контакты
+                                span.footer__promo «Полиграфия от А до Я» — ваш надежный партнер в сфере маркетинга и рекламы!
+                                .contacts.contacts--footer   
+                                    span.phone.phone--footer +7 (495) 241-96-37
+                                    span.contacts__worktime Пн-Сб 10:00—19:00   Вс — выходной
+                                    span.contacts__email 7292554@mail.ru
+                                .place.place--footer
+                                    span.place__phone Москва, м. Дубровка ул. Шарикоподшипниковская, д. 13
+                                    span.place__link Как нас найти
+                        .footer__row
+                            span.footer__title Мы на карте 
+                .footer__map#map
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
         script(src="js/script.min.js")
