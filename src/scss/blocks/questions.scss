@@ -15,9 +15,19 @@
 
 .questions__answer {
     display: none;
-    background-color: rgba($line, 0.5);
+    background-color: rgba(#ecf5fd, 0.5);
     padding: rem(35px) rem(40px);
     position: relative;
+
+    &:before {
+        content: '?';
+        position: absolute;
+        top: 0;
+        left: rem(-145px);
+        font-size: rem(210px);
+        color: #eff8ff;
+        font-family: 'Crete Round', serif;
+    }
 }
 
 .questions__title {
@@ -27,6 +37,8 @@
 }
 
 .questions__hide {
+    display: block;
+    height: rem(50px);
     position: absolute;
     top: rem(35px);
     right: rem(40px);
@@ -35,6 +47,13 @@
     padding-right: rem(33px);
     color: $basic;
     cursor: pointer;
+
+    @include screen-xs {
+        top: 90%;
+        // bottom: 0;
+        right: rem(40px);
+
+    }
 
     &:after {
         content: '';
@@ -56,6 +75,7 @@
     padding-left: rem(60px);
     position: relative;
     margin-bottom: rem(25px);
+    font-size: rem(16px);
 
     &:last-child {
         margin-bottom: 0;

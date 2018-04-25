@@ -24,6 +24,15 @@
     position: relative;
     padding-bottom: rem(60px) ;
 
+    @include screen-lg {
+        font-size: rem(70px);
+    }
+
+    @include screen-sm-xs {
+        font-size: rem(40px);
+    }
+
+
     &:after {
         content: '';
         height: 3px;
@@ -34,10 +43,7 @@
         background-color: $accent;
     }
 
-    @include screen-lg {
-        font-size: rem(70px);
-    }
-}
+ }   
 
 .greeting__bottom {
     display: flex;
@@ -50,6 +56,37 @@
     &:last-child {
         flex-shrink: 0;
         margin-left: auto;
+
+        @include screen-sm-xs {
+            margin-left: 0;
+        }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+        @include screen-sm {
+            max-width: 50%;
+        }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+        @include screen-sm {
+            display: none;
+            overflow: hidden;
+        }
+    }
+
+    &:nth-child(3) {
+        @include screen-xs {
+            display: none;
+        }
+    }
+
+    &:nth-child(4) {
+        @include screen-sm {
+            max-width: 100%;
+        }
     }
 }
 

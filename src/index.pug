@@ -6,6 +6,7 @@ html(lang="ru")
         meta(name="viewport", content="initial-scale=1.0, width=device-width")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet") 
+        link(href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Test-task
@@ -32,7 +33,7 @@ html(lang="ru")
                                 span.logo__promo Ваш заказ уже сегодня
                         .header__column 
                             .contacts   
-                                span.phone +7 (495) 241-96-37
+                                a.phone(href="tel:+7 (495) 241-96-37") +7 (495) 241-96-37
                                 span.contacts__worktime Пн-Сб 10:00—19:00   Вс — выходной
                                 a.link.contacts__email(href="#") 7292554@mail.ru
                         .header__column 
@@ -184,10 +185,10 @@ html(lang="ru")
                         .variants__right
                             h2.section__title Варианты доставки
                             .variants__cards
-                                .variants__card
+                                .variants__card.variants__card--delivery
                                     .variants__pic.variants__pic--clock 
                                     .variants__text.variants__text--delivery Самовывоз из офиса по графику: Пн-Сб: с 10-00 до 19-00
-                                .variants__card
+                                .variants__card.variants__card--delivery
                                     .variants__pic.variants__pic--car 
                                     .variants__text.variants__text--delivery Доставка курьером по вашему адресу от 300 руб.
             section.section.questions

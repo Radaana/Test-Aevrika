@@ -31,6 +31,11 @@
     flex-grow: 1;
     // margin: rem(-5px) rem(-10px) rem(-5px) 0;
 
+    @include screen-sm {
+        font-size: rem(14px);
+    }
+
+
     &:after {
         content: '';
         @include sprite($arrow-down);

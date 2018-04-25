@@ -4,11 +4,17 @@
 
 .section__inner  {
     width: 100%;
-    max-width: rem(1146px);
+    max-width: rem(1230px);
     margin: 0 auto;
     padding-left: rem(220px);
+    padding-right: rem(85px);
     position: relative;
     padding-top: rem(75px);
+
+    @include screen-sm {
+        padding-left: rem(35px);
+        padding-right: rem(35px);
+    }
 
 
     &:before {
@@ -19,6 +25,10 @@
         top: rem(85px);
         left: 0;
         background-color: $accent;
+
+        @include screen-sm {
+            display: none;
+        }
     }
 }
 

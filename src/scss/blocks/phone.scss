@@ -5,6 +5,11 @@
     &--greeting {
         font-size: rem(30px);
         color: #fff;
+
+        @include screen-sm {
+            font-size: rem(20px);
+            margin-bottom: rem(20px);
+        }
     }
 
     &--footer {

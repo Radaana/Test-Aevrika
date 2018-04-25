@@ -24,6 +24,10 @@
     font-size: rem(14px);
     font-weight: 800;
 
+    @include screen-sm-xs {
+        display: none;
+    }
+
     &:hover {
         background-color:$accent;
     }

@@ -15,11 +15,19 @@
     &--left {
         @include sprite($arrow-left);
         left: rem(-65px);
+
+        @include screen-sm {
+            left: rem(-25px);
+        }
     }
 
     &--right {
         @include sprite($arrow-right);
         right: rem(-65px);
+
+        @include screen-sm {
+            right: rem(-25px);
+        }
     }
 }
 
@@ -30,5 +38,5 @@
 .slider__item {
     width: rem(296px);
     height: rem(260px);
-    margin-right: rem(10px);
+    // margin-right: rem(10px);
 }

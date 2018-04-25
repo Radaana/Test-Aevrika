@@ -11,19 +11,19 @@ $(document).ready(function () {
       loop: true,
       breakpoints: {
         // when window width is <= 400px
-        400: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
+        // 400: {
+        //   slidesPerView: 1,
+        //   spaceBetween: 10
+        // },
         // when window width is <= 500px
-        480: {
-          slidesPerView: 2,
-          spaceBetween: 20
+        500: {
+          slidesPerView: 1,
+          spaceBetween: 5
         },
         // when window width is <= 800px
         800: {
-          slidesPerView: 3,
-          spaceBetween: 30
+          slidesPerView: 2,
+          spaceBetween: 15
         }
       }
     }); // swiperInit END

@@ -2,9 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 rem(-10px);
+    
+
+    @include screen-lg{
+        justify-content: center;
+    } 
 
     @include screen-xs {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -44,6 +50,12 @@
     text-align: left;
     cursor: pointer;
 
+    @include screen-xs {
+        width: 100%;
+        height: rem(100px);
+        padding: rem(10px) rem(10px);
+    }
+
     &:hover {
         box-shadow:  20px 20px 100px 0px rgba(#000, 0.2);
     }
@@ -65,6 +77,6 @@
     margin-top: auto;
     align-self: flex-end;
     @include sprite($pink-arrow);
-    width: rem(36px);
-    height: rem(22px);
+    width: 36px;
+    height: 22px;
 }

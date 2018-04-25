@@ -1,11 +1,12 @@
 .form {
-    height: rem(600px);
+    min-height: rem(600px);
     border: 8px solid $basic;
     position: relative;
     padding: rem(40px) rem(70px);
-    // display: flex;
-    // flex-direction: column;
-    // align-content: flex-start;
+
+    @include screen-xs {
+        padding: rem(20px) rem(20px);
+    }
     
 
     &:after {
@@ -17,6 +18,11 @@
         top: rem(40px);
         left: rem(40px);
         z-index: -5;
+
+        @include screen-xs {
+            top: rem(40px);
+            left: rem(20px);
+        }
     }
 }
 
@@ -27,12 +33,25 @@
     transform: translateX(-50%);
     padding: 0 rem(98px);
     background-color: #fff;
+    text-align: center;
+
+    @include screen-lg-md {
+        padding: 0 rem(68px);
+    }
+
+    @include screen-sm {
+        font-size: rem(20px);
+    }
 }
 
 
 .form__row {
     display: flex;
     margin-bottom: rem(20px);
+
+    @include screen-xs {
+        flex-direction: column;
+    }
 }
 
 .form__cell {
@@ -53,12 +72,33 @@
     color: $basic;
     padding: rem(25px) 0;
     margin: 0 rem(15px);
+
+    @include screen-sm {
+        font-size: rem(16px);
+    }
+
     // placeholder: 
 
-    &::-webkit-input-placeholder {color:$basic; opacity: 0.5;};
-    &::-moz-placeholder          {color:$basic; opacity: 0.5;};/* Firefox 19+ */
-    &:-moz-placeholder           {color:$basic; opacity: 0.5;};/* Firefox 18- */
-    &:-ms-input-placeholder      {color:$basic; opacity: 0.5;};
+    &::-webkit-input-placeholder {
+        color:$basic; 
+        opacity: 0.5;
+    
+    };
+    &::-moz-placeholder          {
+        color:$basic; 
+        opacity: 0.5;
+    
+    };/* Firefox 19+ */
+    &:-moz-placeholder           {
+        color:$basic; 
+        opacity: 0.5;
+    
+    };/* Firefox 18- */
+    &:-ms-input-placeholder      {
+        color:$basic; 
+        opacity: 0.5;
+    
+    };
 }
 
 .form__ok {
@@ -77,6 +117,7 @@
     background-color: transparent;
     border: 0;
     margin: 0 rem(15px) rem(30px);
+    cursor: pointer;
 
     &:before {
         content: '';

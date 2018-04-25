@@ -1,6 +1,10 @@
 .cards {
     width: 100%;
     display: flex;
+
+    @include screen-sm {
+        flex-direction: column;
+    }
 }
 
 .cards__card {
@@ -10,13 +14,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: rem(40px) 0 ;
+    padding: rem(40px) rem(10px) ;
     border: 3px solid $line;
     margin-left: -3px;
     position: relative;
 
+    @include screen-sm {
+        width: 100%;
+        height: rem(100px);
+        padding: rem(10px) rem(10px) ;
+        margin-left: 0;
+        margin-top: -3px;
+        justify-content: center;
+    }
+
     &:first-child {
         margin-left: 0;
+
+        @include screen-sm {
+            margin-top: 0px;
+        }
     }
 
     &:hover {
@@ -33,11 +50,22 @@
 .cards__text {
     font-size: rem(24px);
 
+    @include screen-lg-md {
+        font-size: rem(18px);
+    }
+
+    @include screen-md {
+        font-size: rem(14px);
+    }
 
     &--bold {
-        font-size: rem(30px);
+        font-size: rem(24px);
         font-weight: 800;
         color: $basic;
+
+        @include screen-md {
+            font-size: rem(18px);
+        }
     }
 
     &--gray {
@@ -50,6 +78,10 @@
 .cards__icon {
     margin-top: auto;
     margin-bottom: auto;
+
+    @include screen-sm {
+        display: none;
+    }
 
     &--phone {
         width: rem(119px);
@@ -74,4 +106,9 @@
     text-decoration: underline;
     font-size: rem(16px);
     font-weight: 800;
+    text-align: center;
+
+    @include screen-md {
+        font-size: rem(14px);
+    }
 }

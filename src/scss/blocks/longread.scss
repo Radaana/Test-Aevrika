@@ -1,16 +1,42 @@
 .longread {
     display: table;
+
+    @include screen-sm {
+        display: block;
+    }
 }
 
 .longread__row {
     display: table-row;
+
+    @include screen-sm {
+        display: block;
+    }
 }
 
 .longread__cell {
     display: table-cell;
 
+    @include screen-sm {
+        display: block;
+    }
+
+
+
+    p {
+        font-size: rem(16px);
+    }
+
     &:first-child {
         width: rem(265px);
+
+        @include screen-md {
+            width: rem(125px);
+        }
+
+        @include screen-sm {
+            width: 100%;
+        }
     }
 
     &:last-child {
@@ -24,6 +50,10 @@
     border-bottom: 3px solid $accent;
     font-size: rem(18px);
     font-weight: 800;
+
+    @include screen-sm {
+        padding-bottom: rem(15px);
+    }
 }
 
 .longread__subtitle {

@@ -2,6 +2,9 @@
     display: flex;
     width: 100%;
     
+    @include screen-xs {
+        flex-direction: column;
+    }
 }
 
 .variants__left {
@@ -9,6 +12,10 @@
 
     @include screen-lg-md {
         width: 50%;
+    }
+
+    @include screen-xs {
+        width: 100%;
     }
 }
 
@@ -18,6 +25,10 @@
     @include screen-lg-md {
         width: 50%;
     }
+
+    @include screen-xs {
+        width: 100%;
+    }
 }
 
 .variants__cards {
@@ -26,11 +37,22 @@
 }
 
 .variants__card {
-    width: rem(300px);
+    min-width: rem(270px);
+    width: 50%;
     height: rem(116px);
     display: flex;
     margin-bottom: rem(20px);
     align-items: center;
+
+    @include screen-xs {
+        width: 100%;
+        margin-bottom: rem(5px);
+        height: rem(60px);
+    }
+
+    &--delivery {
+        width: 100%;
+    }
 }
 
 .variants__pic {

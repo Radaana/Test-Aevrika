@@ -17,6 +17,10 @@
     padding: rem(12px) rem(25px);
     text-align: center;
     font-size: rem(14px);
+    
+    @include screen-sm {
+        padding: rem(10px) rem(10px);
+    }
 
     &:first-child {
         text-align: left;
@@ -38,6 +42,11 @@
     color: #fff;
     font-size: rem(16px);
     font-weight: 800;
+    
+    @include screen-sm {
+        padding: rem(10px) rem(10px);
+        font-size: rem(14px);
+    }
 }
 
 .table__caption {

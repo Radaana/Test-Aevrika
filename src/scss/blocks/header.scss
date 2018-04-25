@@ -15,6 +15,13 @@
 .header__top-right {
     flex-shrink: 0;
     text-align: center;
+
+
+    @include screen-sm {
+        display: none;
+        overflow: hidden;
+    }
+
 }
 
 .header__bottom {
@@ -38,4 +45,20 @@
         width: initial;
         max-width: 25%;
     }
+
+    &:nth-child(1),
+    &:nth-child(4) {
+        @include screen-sm {
+            max-width: 50%;
+        }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+        @include screen-sm {
+            display: none;
+            overflow: hidden;
+        }
+    }
+        
 }

@@ -2,6 +2,10 @@
     display: flex;
     margin-left: rem(-28px);
     align-items: center;
+
+    @include screen-sm-xs {
+        margin-left: rem(-10px);
+    }
 }
 
 .nav__link {
@@ -11,4 +15,9 @@
     color: $menu;
     padding: 0 rem(28px) ;
     font-size: rem(11px);
+
+    @include screen-sm-xs {
+        padding: 0 rem(10px) ;
+        font-size: rem(9px);
+    }
 }

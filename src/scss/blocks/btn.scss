@@ -12,6 +12,10 @@
         @include screen-md {
             padding: rem(21px) rem(21px);
         }
+
+        @include screen-sm {
+            padding: rem(14px) rem(45px);
+        }
     }
 
     &--greeting {
