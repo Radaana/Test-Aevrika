@@ -6,6 +6,7 @@ html(lang="ru")
         meta(name="viewport", content="initial-scale=1.0, width=device-width")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet") 
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Test-task
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
@@ -23,7 +24,7 @@ html(lang="ru")
                         .header__top-right
                             .favorites Добавить сайт в закладки
                 .header__bottom
-                    .container
+                    .container.header__container
                         .header__column
                             .logo
                                 .logo__pic 
@@ -40,17 +41,51 @@ html(lang="ru")
                                 a.link.place__link(href="#") Как нас найти
                         .header__column 
                             .order   
-                                button.btn(type="button") Cрочный заказ
+                                button.btn.btn--header(type="button") Cрочный заказ
                                 a.link.order__link(href="#") Задать вопрос
             section.section.greeting
                 .greeting__header
                     ul.menu
-                        li.menu__item 
-                            button.menu__button(type="button") Печатная продукция
-                        li.menu__item 
-                            button.menu__button(type="button") Услуги
-                        li.menu__item 
-                            button.menu__button(type="button") Наружная и интерьерная реклама
+                        //- li.menu__item 
+                        button.menu__button(type="button") Печатная продукция
+                        button.menu__button(type="button") Услуги
+                        button.menu__button(type="button") Наружная и интерьерная реклама
+                    .menu__hop
+                        .menu__container
+                            .menu__cell
+                                span.menu__subtitle Визитки
+                            .menu__cell
+                                span.menu__subtitle Календари
+                                ul.menu__list
+                                        each li in ["Календарь - домик", "Календарь перекидной", "Календарь карманный", "Календарь квартальный", "Календарь отрывной"]
+                                            li.menu__item= li
+                            .menu__cell
+                                span.menu__subtitle Листовки и флаеры
+                                ul.menu__list
+                                        each li in ["Листовки 100х200", "Листовки А4", "Листовки А5", "Листовки А6"]
+                                            li.menu__item= li
+                            .menu__cell
+                                span.menu__subtitle Буклеты
+                                ul.menu__list
+                                        each li in ["Буклеты А4", "Буклеты А3"]
+                                            li.menu__item= li
+                            .menu__cell
+                                span.menu__subtitle Меню
+                            .menu__cell
+                                span.menu__subtitle Брошюры
+                                ul.menu__list
+                                        each li in ["Брошюры 99х210", "Брошюры А5", "Брошюры 200х200"]
+                                            li.menu__item= li
+                            .menu__cell
+                                span.menu__subtitle Афиши
+                                ul.menu__list
+                                        each li in ["Афиша А1/А2", "Афиша А3"]
+                                            li.menu__item= li
+                            .menu__cell
+                                span.menu__subtitle Бланки и самокопирующиеся бланки
+                                ul.menu__list
+                                        each li in ["Бланки А4", "Бланки А5"]
+                                            li.menu__item= li
                 .greeting__main
                     .greeting__top
                         .container
@@ -160,6 +195,7 @@ html(lang="ru")
                     h2.section__title Ответы на ваши вопросы
                     ul.questions__list
                         li.questions__item
+                            button.questions__button.link(type="button") Как сделать заказ?
                             .questions__answer
                                 h3.questions__title Как сделать заказ?
                                 button.questions__hide(type="button") свернуть
@@ -169,16 +205,40 @@ html(lang="ru")
                                     li.questions__point Благодаря максимальной автоматизации процесса и тщательной подготовке сотрудников все заказы (оперативная цветная печать, изготовление наружной рекламы) выполняются в минимальные сроки.
                         li.questions__item
                             button.questions__button.link(type="button") Вы осуществляете доставку?
+                            .questions__answer
+                                h3.questions__title Вы осуществляете доставку?
+                                button.questions__hide(type="button") свернуть
+                                p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах.
                         li.questions__item
                             button.questions__button.link(type="button") Вы разрабатываете дизайн?
+                            .questions__answer
+                                h3.questions__title Вы разрабатываете дизайн?
+                                button.questions__hide(type="button") свернуть
+                                p Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем 
                         li.questions__item
                             button.questions__button.link(type="button") Какие способы оплаты?
+                            .questions__answer
+                                h3.questions__title Какие способы оплаты?
+                                button.questions__hide(type="button") свернуть
+                                p Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем 
                         li.questions__item
                             button.questions__button.link(type="button") Какие сроки производства?
+                            .questions__answer
+                                h3.questions__title Какие сроки производства?
+                                button.questions__hide(type="button") свернуть
+                                p Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем 
                         li.questions__item
                             button.questions__button.link(type="button") Какие требования к макету?
+                            .questions__answer
+                                h3.questions__title Какие требования к макету?
+                                button.questions__hide(type="button") свернуть
+                                p Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем 
                         li.questions__item
                             button.questions__button.link(type="button") Как узнать стоимость продукции?
+                            .questions__answer
+                                h3.questions__title Как узнать стоимость продукции?
+                                button.questions__hide(type="button") свернуть
+                                p Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем 
                     form.form
                         h2.section__title.form__title Оформить заказ
                         .form__row
@@ -224,13 +284,18 @@ html(lang="ru")
                     .slider
                         .slider__arrow.slider__arrow--left
                         .slider__arrow.slider__arrow--right
-                        ul.slider__list
-                            li.slider__item
-                                img.img(src="img/portfolio-1.png")
-                            li.slider__item
-                                img.img(src="img/portfolio-2.png")
-                            li.slider__item
-                                img.img(src="img/portfolio-3.png")
+                        .swiper-container
+                            ul.slider__list.swiper-wrapper
+                                li.slider__item.swiper-slide
+                                    img.img(src="img/portfolio-1.png")
+                                li.slider__item.swiper-slide
+                                    img.img(src="img/portfolio-2.png")
+                                li.slider__item.swiper-slide
+                                    img.img(src="img/portfolio-3.png")
+                                li.slider__item.swiper-slide
+                                    img.img(src="img/portfolio-3.png")
+                                li.slider__item.swiper-slide
+                                    img.img(src="img/portfolio-3.png")
                     .longread
                         .longread__row
                             .longread__cell
@@ -308,4 +373,5 @@ html(lang="ru")
                             span.footer__title Мы на карте 
                 .footer__map#map
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js")
         script(src="js/script.min.js")

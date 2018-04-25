@@ -1,6 +1,6 @@
 .nav__list {
     display: flex;
-    margin-left: -28px;
+    margin-left: rem(-28px);
     align-items: center;
 }
 
@@ -9,6 +9,6 @@
     text-align: center;
     text-transform: uppercase;
     color: $menu;
-    padding: 0 28px ;
-    font-size: 11px;
+    padding: 0 rem(28px) ;
+    font-size: rem(11px);
 }

@@ -10,24 +10,24 @@
     display: table-cell;
 
     &:first-child {
-        width: 265px;
+        width: rem(265px);
     }
 
     &:last-child {
-        padding-left: 45px;
+        padding-left: rem(45px);
     }
 }
 
 .longread__title {
     color: $basic;
-    padding-bottom: 35px;
+    padding-bottom: rem(35px);
     border-bottom: 3px solid $accent;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 800;
 }
 
 .longread__subtitle {
     color: $basic;
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 800;
 }

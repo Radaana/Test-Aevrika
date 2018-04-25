@@ -1,1 +1,1 @@
-console.log( `У тебя все обязательно получится` );
+console.log( `JS connected` );

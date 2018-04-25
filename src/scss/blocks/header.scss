@@ -3,7 +3,7 @@
 }
 
 .header__top {
-    height: 35px;
+    height: rem(35px);
     border-bottom: 1px solid $line;
     display: flex;
 }
@@ -18,7 +18,14 @@
 }
 
 .header__bottom {
-    height: 126px;
+    height: rem(126px);
+}
+
+.header__container {
+    @include screen-md {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .header__column {
@@ -26,4 +33,9 @@
     height: 100%;
     display: flex;
     align-items: center;
+
+    @include screen-md {
+        width: initial;
+        max-width: 25%;
+    }
 }

@@ -1,24 +1,25 @@
 .slider {
     width: 100%;
     position: relative;
-    margin-bottom: 83px;
+    margin-bottom: rem(83px);
 }
 
 .slider__arrow {
     position: absolute;
-    width: 19px;
-    height: 24px;
+    width: rem(19px);
+    height: rem(24px);
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 
     &--left {
         @include sprite($arrow-left);
-        left: -65px;
+        left: rem(-65px);
     }
 
     &--right {
         @include sprite($arrow-right);
-        right: -65px;
+        right: rem(-65px);
     }
 }
 
@@ -27,7 +28,7 @@
 }
 
 .slider__item {
-    width: 296px;
-    height: 260px;
-    margin-right: 10px;
+    width: rem(296px);
+    height: rem(260px);
+    margin-right: rem(10px);
 }

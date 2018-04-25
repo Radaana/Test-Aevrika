@@ -1,10 +1,10 @@
 .questions__list {
-    margin-bottom: 87px;
+    margin-bottom: rem(87px);
 }
 
 .questions__button {
     background-color: #fff;
-    margin: 15px 0;
+    margin: rem(15px) 0;
     padding-left: 0;
     padding-right: 0;
     border-left: 0;
@@ -14,30 +14,32 @@
 }
 
 .questions__answer {
+    display: none;
     background-color: rgba($line, 0.5);
-    padding: 35px 40px;
+    padding: rem(35px) rem(40px);
     position: relative;
 }
 
 .questions__title {
-    margin: 0 0 40px 0;
+    margin: 0 0 rem(40px) 0;
     color: $basic;
     font-weight: 800;
 }
 
 .questions__hide {
     position: absolute;
-    top: 35px;
-    right: 40px;
+    top: rem(35px);
+    right: rem(40px);
     background-color: transparent;
     border: 0;
-    padding-right: 33px;
+    padding-right: rem(33px);
     color: $basic;
+    cursor: pointer;
 
     &:after {
         content: '';
-        width: 10px;
-        height: 6px;
+        width: rem(10px);
+        height: rem(6px);
         position: absolute;
         top: 50%;
         right: 0;
@@ -51,9 +53,9 @@
 }
 
 .questions__point {
-    padding-left: 60px;
+    padding-left: rem(60px);
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 
     &:last-child {
         margin-bottom: 0;
@@ -65,9 +67,9 @@
         content: counter(list) ".";   
         display: block;
         text-align: center;
-        line-height: 32px;
-        height: 32px;
-        width: 32px;
+        line-height: rem(32px);
+        height: rem(32px);
+        width: rem(32px);
         background-color: #fff;
         border-radius: 50%;
         left: 0;

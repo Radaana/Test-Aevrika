@@ -4,13 +4,13 @@
 }
 
 .logo__pic  {
-    width: 155px;
-    height: 47px;   
-    margin-bottom: 14px;
+    width: rem(155px);
+    height: rem(47px);   
+    margin-bottom: rem(14px);
 }
 
 .logo__promo {
     color: $basic;
     font-weight: 800;
-    font-size: 14px;
+    font-size: rem(14px);
 }

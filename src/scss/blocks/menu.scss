@@ -9,38 +9,115 @@
     // width: 100%;
     height: 100%;
     flex-grow: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .menu__button {
     display: block;
     height: 100%;
-    width: 100%;
+    // width: 100%;
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 700;
-    padding-right: 40px;
+    padding-right: rem(40px);
     border: none;
     background-color: transparent;
     position: relative;
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     cursor: pointer;
     flex-grow: 1;
+    // margin: rem(-5px) rem(-10px) rem(-5px) 0;
 
     &:after {
         content: '';
         @include sprite($arrow-down);
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: rem(16px);
+        height: rem(16px);
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 10%;
         // transform: translateY(-50%)
     }
 
     &:hover {
         background-color: $accent;
     }
+
+    @include screen-lg {
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+.menu__hop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: rem(660px);
+    // bottom: 0;
+    right: 0;
+    background-color: $line;
+    z-index: 5;
+    display: none; 
+}
+
+.menu__container {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    max-width: rem(1250px);
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(50px);
+}
+
+.menu__cell {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    // align-items: center;
+}
+
+.menu__subtitle {
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: block;
+    position: relative;
+    padding-bottom: rem(25px);
+    font-size: rem(16px);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: rem(25px);
+    color: $basic;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 61px;
+        height: 2px;
+        background-color: $accent;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.menu__list {
+    font-size: rem(14px);
+    color: $basic;
+
+    &:first-child {
+        margin-right: rem(30px);
+    }
+}
+
+.menu__item {
+    padding: rem(5px) rem(10px) rem(5px) 0 ;
 }

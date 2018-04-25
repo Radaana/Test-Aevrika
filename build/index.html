@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Test-task</title>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -32,7 +33,7 @@
           </div>
         </div>
         <div class="header__bottom">
-          <div class="container">
+          <div class="container header__container">
             <div class="header__column">
               <div class="logo">
                 <div class="logo__pic"> <img class="img" src="img/logo.png"></div><span class="logo__promo">Ваш заказ уже сегодня</span>
@@ -46,7 +47,7 @@
             </div>
             <div class="header__column"> 
               <div class="order">  
-                <button class="btn" type="button">Cрочный заказ</button><a class="link order__link" href="#">Задать вопрос</a>
+                <button class="btn btn--header" type="button">Cрочный заказ</button><a class="link order__link" href="#">Задать вопрос</a>
               </div>
             </div>
           </div>
@@ -55,16 +56,58 @@
       <section class="section greeting">
         <div class="greeting__header">
           <ul class="menu">
-            <li class="menu__item"> 
-              <button class="menu__button" type="button">Печатная продукция</button>
-            </li>
-            <li class="menu__item"> 
-              <button class="menu__button" type="button">Услуги</button>
-            </li>
-            <li class="menu__item"> 
-              <button class="menu__button" type="button">Наружная и интерьерная реклама</button>
-            </li>
+            <button class="menu__button" type="button">Печатная продукция</button>
+            <button class="menu__button" type="button">Услуги</button>
+            <button class="menu__button" type="button">Наружная и интерьерная реклама</button>
           </ul>
+          <div class="menu__hop">
+            <div class="menu__container">
+              <div class="menu__cell"><span class="menu__subtitle">Визитки</span></div>
+              <div class="menu__cell"><span class="menu__subtitle">Календари</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Календарь - домик</li>
+                  <li class="menu__item">Календарь перекидной</li>
+                  <li class="menu__item">Календарь карманный</li>
+                  <li class="menu__item">Календарь квартальный</li>
+                  <li class="menu__item">Календарь отрывной</li>
+                </ul>
+              </div>
+              <div class="menu__cell"><span class="menu__subtitle">Листовки и флаеры</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Листовки 100х200</li>
+                  <li class="menu__item">Листовки А4</li>
+                  <li class="menu__item">Листовки А5</li>
+                  <li class="menu__item">Листовки А6</li>
+                </ul>
+              </div>
+              <div class="menu__cell"><span class="menu__subtitle">Буклеты</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Буклеты А4</li>
+                  <li class="menu__item">Буклеты А3</li>
+                </ul>
+              </div>
+              <div class="menu__cell"><span class="menu__subtitle">Меню</span></div>
+              <div class="menu__cell"><span class="menu__subtitle">Брошюры</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Брошюры 99х210</li>
+                  <li class="menu__item">Брошюры А5</li>
+                  <li class="menu__item">Брошюры 200х200</li>
+                </ul>
+              </div>
+              <div class="menu__cell"><span class="menu__subtitle">Афиши</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Афиша А1/А2</li>
+                  <li class="menu__item">Афиша А3</li>
+                </ul>
+              </div>
+              <div class="menu__cell"><span class="menu__subtitle">Бланки и самокопирующиеся бланки</span>
+                <ul class="menu__list">
+                  <li class="menu__item">Бланки А4</li>
+                  <li class="menu__item">Бланки А5</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="greeting__main">
           <div class="greeting__top">
@@ -257,6 +300,7 @@
           <h2 class="section__title">Ответы на ваши вопросы</h2>
           <ul class="questions__list">
             <li class="questions__item">
+              <button class="questions__button link" type="button">Как сделать заказ?</button>
               <div class="questions__answer">
                 <h3 class="questions__title">Как сделать заказ?</h3>
                 <button class="questions__hide" type="button">свернуть</button>
@@ -269,21 +313,51 @@
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Вы осуществляете доставку?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Вы осуществляете доставку?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах.</p>
+              </div>
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Вы разрабатываете дизайн?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Вы разрабатываете дизайн?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем </p>
+              </div>
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Какие способы оплаты?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Какие способы оплаты?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем </p>
+              </div>
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Какие сроки производства?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Какие сроки производства?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем </p>
+              </div>
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Какие требования к макету?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Какие требования к макету?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем </p>
+              </div>
             </li>
             <li class="questions__item">
               <button class="questions__button link" type="button">Как узнать стоимость продукции?</button>
+              <div class="questions__answer">
+                <h3 class="questions__title">Как узнать стоимость продукции?</h3>
+                <button class="questions__hide" type="button">свернуть</button>
+                <p>Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука. Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем </p>
+              </div>
             </li>
           </ul>
           <form class="form">
@@ -336,11 +410,15 @@
           <div class="slider">
             <div class="slider__arrow slider__arrow--left"></div>
             <div class="slider__arrow slider__arrow--right"></div>
-            <ul class="slider__list">
-              <li class="slider__item"><img class="img" src="img/portfolio-1.png"></li>
-              <li class="slider__item"><img class="img" src="img/portfolio-2.png"></li>
-              <li class="slider__item"><img class="img" src="img/portfolio-3.png"></li>
-            </ul>
+            <div class="swiper-container">
+              <ul class="slider__list swiper-wrapper">
+                <li class="slider__item swiper-slide"><img class="img" src="img/portfolio-1.png"></li>
+                <li class="slider__item swiper-slide"><img class="img" src="img/portfolio-2.png"></li>
+                <li class="slider__item swiper-slide"><img class="img" src="img/portfolio-3.png"></li>
+                <li class="slider__item swiper-slide"><img class="img" src="img/portfolio-3.png"></li>
+                <li class="slider__item swiper-slide"><img class="img" src="img/portfolio-3.png"></li>
+              </ul>
+            </div>
           </div>
           <div class="longread">
             <div class="longread__row">
@@ -461,6 +539,7 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

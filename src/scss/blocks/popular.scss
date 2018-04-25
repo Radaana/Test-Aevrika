@@ -1,34 +1,43 @@
 .popular {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin: 0 rem(-10px);
+
+    @include screen-xs {
+        flex-direction: column;
+    }
 }
 
 .popular__card {
-    margin: 0 10px;
+    margin: 0 rem(10px);
 }
 
 .popular__name {
     color: $basic;
-    font-size: 18px;
+    font-size: rem(18px);
     text-decoration: underline;
     font-weight: 800;
 }
 
 .popular__pic {
-    margin: 20px 0;
-    width: 295px;
-    height: 221px;
+    margin: rem(20px) 0;
+    width: rem(295px);
+    height: rem(221px);
+
+    // @include screen-lg {
+    //     width: rem(240px);
+    // }
+    
 }
 
 .popular__order {
-    width: 295px;
-    height: 221px;
-    margin: 20px 0;
+    width: rem(295px);
+    height: rem(221px);
+    margin: rem(20px) 0;
     align-self: flex-end;
     border: 8px solid $accent;
      
-    padding: 37px 35px;
+    padding: rem(37px) rem(35px);
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -38,11 +47,16 @@
     &:hover {
         box-shadow:  20px 20px 100px 0px rgba(#000, 0.2);
     }
+
+    // @include screen-lg {
+    //     width: rem(240px);
+    //     height: rem(168px);
+    // }
 }
 
 .popular__text {
     color: $accent;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 800;
     text-decoration: underline;
 }
@@ -51,6 +65,6 @@
     margin-top: auto;
     align-self: flex-end;
     @include sprite($pink-arrow);
-    width: 36px;
-    height: 22px;
+    width: rem(36px);
+    height: rem(22px);
 }

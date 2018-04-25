@@ -1,14 +1,21 @@
 .btn {
-    padding: 14px 45px;
+    padding: rem(14px) rem(45px);
     color: #fff;
     text-transform: uppercase;
     border: 2px solid transparent;
     background-color: $accent;
-    font-size: 12px;
+    font-size: rem(12px);
     cursor: pointer;
 
+
+    &--header {
+        @include screen-md {
+            padding: rem(21px) rem(21px);
+        }
+    }
+
     &--greeting {
-        padding: 21px 73px;
+        padding: rem(21px) rem(73px);
     }
 
     &:hover {

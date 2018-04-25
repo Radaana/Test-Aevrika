@@ -6,7 +6,7 @@
 .video__pic {
     background-color: $basic;
     width: 100%;
-    max-width: 925px;
+    max-width: rem(925px);
     // background: url('')
 }
 
@@ -18,18 +18,18 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 800;
     color: #fff;
     // justify-content: center;
 
     &:before {
         content: '';
-        width: 92px;
-        height: 66px;
+        width: rem(92px);
+        height: rem(66px);
         @include sprite($play);
         display: inline-block;
         text-align: center;
-        margin: 0 auto 40px;
+        margin: 0 auto rem(40px);
     }
 }

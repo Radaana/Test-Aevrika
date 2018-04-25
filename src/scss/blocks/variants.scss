@@ -6,10 +6,18 @@
 
 .variants__left {
     width: 65%;
+
+    @include screen-lg-md {
+        width: 50%;
+    }
 }
 
 .variants__right {
     width: 35%;
+
+    @include screen-lg-md {
+        width: 50%;
+    }
 }
 
 .variants__cards {
@@ -18,30 +26,39 @@
 }
 
 .variants__card {
-    width: 300px;
-    height: 116px;
+    width: rem(300px);
+    height: rem(116px);
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     align-items: center;
 }
 
 .variants__pic {
-    width: 116px;
-    height: 116px;
+    width: rem(116px);
+    height: rem(116px);
     background-color: $line;
     border-radius: 50%;
     position: relative;
     flex-shrink: 0;
 
+    @include screen-sm {
+        width: rem(40px);
+        height: rem(40px);
+    }
+
     &:before {
         content: '';
         display: block;
         // text-align: center;
-        // margin: 0 auto 40px;
+        // margin: 0 auto rem(40px);
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include screen-sm {
+            display: none;
+        }
     }
 }
 
@@ -82,7 +99,7 @@
 }
 
 .variants__text {
-    padding: 0 20px 0 40px;
+    padding: 0 rem(20px) 0 rem(40px);
     color: $basic;
     font-weight: 800;
 

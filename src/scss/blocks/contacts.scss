@@ -1,27 +1,35 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: rem(14px);
     align-items: flex-start;
-    padding-left: 40px;
+    padding-left: rem(40px);
     position: relative;
+
+    @include screen-sm {
+        padding-left: rem(10px);
+    }
 
     &:before {
         content: '';
         @include sprite($phone-small);
         display: inline-block;
-        padding-top: 10px;
-        margin-right: 15px;
+        padding-top: rem(10px);
+        margin-right: rem(15px);
         width: 16px;
         height: 16px;
         position: absolute;
-        top: 10px;
+        top: rem(10px);
         left: 0;
+
+        @include screen-sm {
+            display: none;
+        }
     }
 
     &--footer {
         color: #fff;
-        margin-bottom: 35px;
+        margin-bottom: rem(35px);
 
         &:before {
             @include sprite($phone-white);
@@ -34,5 +42,5 @@
 }
 
 .contacts__email {
-    margin-top: 12px;
+    margin-top: rem(12px);
 }

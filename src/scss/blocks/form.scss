@@ -1,8 +1,8 @@
 .form {
-    height: 600px;
+    height: rem(600px);
     border: 8px solid $basic;
     position: relative;
-    padding: 40px 70px;
+    padding: rem(40px) rem(70px);
     // display: flex;
     // flex-direction: column;
     // align-content: flex-start;
@@ -14,25 +14,25 @@
         height: 100%;
         background-color: $line;
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: rem(40px);
+        left: rem(40px);
         z-index: -5;
     }
 }
 
 .form__title {
     position: absolute;
-    top: -16px;
+    top: rem(-16px);
     left: 50%;
     transform: translateX(-50%);
-    padding: 0 98px;
+    padding: 0 rem(98px);
     background-color: #fff;
 }
 
 
 .form__row {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .form__cell {
@@ -49,10 +49,10 @@
     border-left: 0;
     border-right: 0;
     border-top: 0;
-    font-size: 24px;
+    font-size: rem(24px);
     color: $basic;
-    padding: 25px 0;
-    margin: 0 15px;
+    padding: rem(25px) 0;
+    margin: 0 rem(15px);
     // placeholder: 
 
     &::-webkit-input-placeholder {color:$basic; opacity: 0.5;};
@@ -66,22 +66,22 @@
 }
 
 .form__textarea {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 }
 
 .form__add {
     display: block;
     color: $basic;
-    padding-left: 40px;
+    padding-left: rem(40px);
     position: relative;
     background-color: transparent;
     border: 0;
-    margin: 0 15px 30px;
+    margin: 0 rem(15px) rem(30px);
 
     &:before {
         content: '';
-        height: 20px;
-        width: 20px;
+        height: rem(20px);
+        width: rem(20px);
         position: absolute;
         top: 0;
         left: 0;
@@ -90,7 +90,7 @@
 }
 
 .form__submit {
-    padding: 20px 105px;
+    padding: rem(20px) rem(105px);
     margin: 0 auto;
     display: block;
 }

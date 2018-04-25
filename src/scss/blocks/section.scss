@@ -4,11 +4,11 @@
 
 .section__inner  {
     width: 100%;
-    max-width: 1146px;
+    max-width: rem(1146px);
     margin: 0 auto;
-    padding-left: 220px;
+    padding-left: rem(220px);
     position: relative;
-    padding-top: 75px;
+    padding-top: rem(75px);
 
 
     &:before {
@@ -16,15 +16,15 @@
         height: 3px;
         width: 84px;
         position: absolute;
-        top: 85px;
+        top: rem(85px);
         left: 0;
         background-color: $accent;
     }
 }
 
 .section__title {
-    margin: 0 0 30px 0;
-    font-size: 24px;
+    margin: 0 0 rem(30px) 0;
+    font-size: rem(24px);
     text-transform: uppercase;
     color: $basic;
     font-family: 'Open Sans Condensed', sans-serif;

@@ -14,9 +14,9 @@
 
 .table__cell {
     display: table-cell;
-    padding: 12px 25px;
+    padding: rem(12px) rem(25px);
     text-align: center;
-    font-size: 14px;
+    font-size: rem(14px);
 
     &:first-child {
         text-align: left;
@@ -34,27 +34,27 @@
 }
 
 .table__header-cell {
-    padding: 20px 25px;
+    padding: rem(20px) rem(25px);
     color: #fff;
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: 800;
 }
 
 .table__caption {
     // display: table-caption;
     width: 100%;
-    font-size: 14px;
-    padding: 26px;
+    font-size: rem(14px);
+    padding: rem(26px);
     border-bottom: 1px solid $line;
-    margin-bottom: 79px;
+    margin-bottom: rem(79px);
 }
 
 .table__caption-head {
     color: $basic;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 .table__caption-text {
-    padding: 3px 0;
+    padding: rem(3px) 0;
 }

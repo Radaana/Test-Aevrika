@@ -1,27 +1,28 @@
 .greeting__header {
-    height: 75px;
+    height: rem(75px);
     background-color: $basic;
+    position: relative;
 }
 
 .greeting__main {
-    // height: 840px;
+    // height: rem(840px);
     background: $basic url('../img/bg-1.png') center center no-repeat;
     background-size: cover;
     
 }
 
 .greeting__top {
-    height: 400px;
+    height: rem(400px);
 }
 
 .greeting__title {
     color: #fff;
-    font-size: 108px;
+    font-size: rem(108px);
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     position: relative;
-    padding-bottom: 60px ;
+    padding-bottom: rem(60px) ;
 
     &:after {
         content: '';
@@ -32,18 +33,34 @@
         left: 0;
         background-color: $accent;
     }
+
+    @include screen-lg {
+        font-size: rem(70px);
+    }
 }
 
 .greeting__bottom {
     display: flex;
-    height: 260px;
+    height: rem(260px);
     width: 100%;
     justify-content: space-between
+}
+
+.greeting__column {
+    &:last-child {
+        flex-shrink: 0;
+        margin-left: auto;
+    }
 }
 
 .greeting__button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 80px;
+    padding: 0 rem(80px);
+    max-width: rem(460px);
+
+    @include screen-md {
+        padding: 0 rem(40px);
+    }
 }
