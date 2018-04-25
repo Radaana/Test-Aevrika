@@ -1,0 +1,92 @@
+.variants {
+    display: flex;
+    width: 100%;
+    
+}
+
+.variants__left {
+    width: 65%;
+}
+
+.variants__right {
+    width: 35%;
+}
+
+.variants__cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.variants__card {
+    width: 300px;
+    height: 116px;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.variants__pic {
+    width: 116px;
+    height: 116px;
+    background-color: $line;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+
+    &:before {
+        content: '';
+        display: block;
+        // text-align: center;
+        // margin: 0 auto 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.variants__pic--wallet {
+    &:before {
+        @include sprite($wallet);
+    }
+}
+.variants__pic--sheet {
+    &:before {
+        @include sprite($sheet);
+    }
+}
+.variants__pic--card {
+    &:before {
+        @include sprite($card);
+    }
+}
+.variants__pic--pointer {
+    &:before {
+        @include sprite($pointer);
+    }
+}
+.variants__pic--wallet {
+    &:before {
+        @include sprite($wallet);
+    }
+}
+.variants__pic--clock {
+    &:before {
+        @include sprite($clock);
+    }
+}
+.variants__pic--car {
+    &:before {
+        @include sprite($car);
+    }
+}
+
+.variants__text {
+    padding: 0 20px 0 40px;
+    color: $basic;
+    font-weight: 800;
+
+    &--delivery {
+        padding-right: 0;
+    }
+}

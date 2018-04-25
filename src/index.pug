@@ -18,7 +18,7 @@ html(lang="ru")
                                 ul.nav__list
                                     each val in ["О компании", "Портфолио", "Сотрудничество", "Требования  к макету", "Контакты"]
                                         li.nav__item
-                                            a.nav__link(href="#")= val
+                                            a.nav__link(href="#" title=`${val}`)= val
                         .header__top-right
                             .favorites Добавить сайт в закладки
                 .header__bottom
@@ -87,8 +87,106 @@ html(lang="ru")
                             li.popular__card
                                 span.popular__name= item 
                                 .popular__pic
-                                    img.img(src=`img/${index +1}.png`)
+                                    img.img(src=`img/${index +1}.png` alt=`${item}`)
                         button.popular__order(type="button")
                             .popular__text Оформить индивидуальный заказ
                             .popular__arrow
+            section.section.cost
+                .section__inner
+                    h2.section__title Стоимость
+                    .table.cost__table
+                        .table__row.table__header
+                            each th in ['Материал', '360 dpi', '540 dpi', '720 dpi', '1440 dpi']
+                                .table__cell.table__header-cell= th
+                        .table__row
+                            each td in ['Китай 440', '240', '250', '250', '645']
+                                .table__cell= td
+                        .table__row
+                            each td in ['Европа 440', '260', '295', '388', '700']
+                                .table__cell= td
+                        .table__row
+                            each td in ['Европа 510', '280', '310', '388', '760']
+                                .table__cell= td
+                        .table__row
+                            each td, index in ['Банерная сетка', '250', '330', '---', '---']
+                                if index==2
+                                    .table__cell.table__cell--special= td
+                                else
+                                    .table__cell= td
+                        .table__row
+                            each td in ['Бумага Ситилайт', '220', '265', '320', '630']
+                                .table__cell= td
+                        .table__row
+                            each td in ['Пленка самоклеющаяся ОРАЖДЕТ', '260', '350', '450', '670']
+                                .table__cell= td
+                        .table__row
+                            each td in ['Пленка перфорированная', '---', '---', '520', '820']
+                                .table__cell= td
+                        .table__row
+                            each td in ['Пленка Бэклит без клеевого слоя', '---', '---', '600', '820']
+                                .table__cell= td
+                    .table__caption
+                        .table__caption-head Дополнительно
+                        ul.table__caption-body 
+                            li.table__caption-text Стоимость услуг дизайнера (наш дизайнер нарисует для вас макет или доработает ваш макет)
+                            li.table__caption-text Стоимость цветопробы 
+                    .video
+                        .video__pic
+                            img.img(src="img/bg-2.png") 
+                        .video__text Посмотреть процесс широкоформатной печати
+            section.section
+                .section__inner
+                    .variants
+                        .variants__left
+                            h2.section__title Варианты оплаты
+                            .variants__cards
+                                .variants__card
+                                    .variants__pic.variants__pic--wallet
+                                    .variants__text Оплатить в офисе
+                                .variants__card
+                                    .variants__pic.variants__pic--sheet
+                                    .variants__text Оплатить по расчетному счету
+                                .variants__card
+                                    .variants__pic.variants__pic--card
+                                    .variants__text Оплатить по карте
+                                .variants__card
+                                    .variants__pic.variants__pic--pointer
+                                    .variants__text Оплатить онлайн
+                        .variants__right
+                            h2.section__title Варианты доставки
+                            .variants__cards
+                                .variants__card
+                                    .variants__pic.variants__pic--clock 
+                                    .variants__text.variants__text--delivery Самовывоз из офиса по графику: Пн-Сб: с 10-00 до 19-00
+                                .variants__card
+                                    .variants__pic.variants__pic--car 
+                                    .variants__text.variants__text--delivery Доставка курьером по вашему адресу от 300 руб.
+            section.section.questions
+                .section__inner
+                    h2.section__title Ответы на ваши вопросы
+                    ul.questions__list
+                        li.questions__item
+                            .questions__answer
+                                h3.questions__title Как сделать заказ?
+                                button.questions__hide(type="button") свернуть
+                                ul.questions__list
+                                    li.questions__point У нас можно заказать флаеры, афиши, бланки, печати, штампы, вывески, лайтбоксы, цветные объемные буквы с подсветкой и штендеры. Современное оборудование. Если вам нужна оперативная печать полиграфической продукции высочайшего качества, тогда вы попали в нужное место.
+                                    li.questions__point Лучшие специалисты. Каждый сотрудник нашего центра обладает хорошим опытом и готов приложить максимум усилий для выполнения вашего заказа. Высокая скорость работы.
+                                    li.questions__point Благодаря максимальной автоматизации процесса и тщательной подготовке сотрудников все заказы (оперативная цветная печать, изготовление наружной рекламы) выполняются в минимальные сроки.
+                        li.questions__item
+                            button.questions__button.link(type="button") Вы осуществляете доставку?
+                        li.questions__item
+                            button.questions__button.link(type="button") Вы разрабатываете дизайн?
+                        li.questions__item
+                            button.questions__button.link(type="button") Какие способы оплаты?
+                        li.questions__item
+                            button.questions__button.link(type="button") Какие сроки производства?
+                        li.questions__item
+                            button.questions__button.link(type="button") Какие требования к макету?
+                        li.questions__item
+                            button.questions__button.link(type="button") Как узнать стоимость продукции?
+
+
+
+
         script(src="js/script.min.js")
