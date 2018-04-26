@@ -7,7 +7,7 @@
     position: relative;
 
     @include screen-sm {
-        padding-left: rem(10px);
+        padding-left: rem(0px);
     }
 
     &:before {

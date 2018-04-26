@@ -34,6 +34,10 @@
 .variants__cards {
     display: flex;
     flex-wrap: wrap;
+
+    @include screen-xs {
+        margin-bottom: rem(30px);
+    }
 }
 
 .variants__card {
@@ -44,10 +48,15 @@
     margin-bottom: rem(20px);
     align-items: center;
 
-    @include screen-xs {
+    @include screen-sm {
         width: 100%;
         margin-bottom: rem(5px);
-        height: rem(60px);
+        min-height: rem(50px);
+        height: initial;
+    }
+
+    @include screen-xs {
+        min-height: rem(40px);
     }
 
     &--delivery {
@@ -71,8 +80,6 @@
     &:before {
         content: '';
         display: block;
-        // text-align: center;
-        // margin: 0 auto rem(40px);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -124,6 +131,10 @@
     padding: 0 rem(20px) 0 rem(40px);
     color: $basic;
     font-weight: 800;
+
+    @include screen-sm {
+        padding: 0 rem(20px) 0 rem(20px);
+    }
 
     &--delivery {
         padding-right: 0;
