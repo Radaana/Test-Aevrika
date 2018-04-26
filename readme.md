@@ -1,6 +1,6 @@
-Тестовое задание Level II
+Тестовое задание 
 
-https://radaana.github.io/Test-Funbox/build/index.html
+https://radaana.github.io/Test-Aevrika/build/index.html
 
 ----------------------------
 
